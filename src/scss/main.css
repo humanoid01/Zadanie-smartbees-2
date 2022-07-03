@@ -1,0 +1,11 @@
+.heading-container {
+  width: 25%;
+  background-color: green;
+  width: 25%;
+  margin: 1rem auto 1rem auto;
+  border-radius: 6px;
+}
+
+.hide {
+  display: none;
+}/*# sourceMappingURL=main.css.map */
