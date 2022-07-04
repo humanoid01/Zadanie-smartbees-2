@@ -4,7 +4,7 @@
   <input type="checkbox" @click="isNewAccount = !isNewAccount" />
   <span>Nie masz konta? Zarejestruj się!</span>
 
-  <form @submit.prevent v-if="isNewAccount" id="submit">
+  <form @submit.prevent v-if="isNewAccount" id="submit" class="register">
     <div>
       <input type="text" name="" id="" placeholder="Login" />
       <input type="password" name="" id="" placeholder="Hasło" />

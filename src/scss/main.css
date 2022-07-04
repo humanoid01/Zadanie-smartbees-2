@@ -1,6 +1,6 @@
 .heading-container {
   width: 25%;
-  background-color: green;
+  background-color: #5fcf99;
   width: 25%;
   margin: 1rem auto 1rem auto;
   border-radius: 6px;
@@ -8,4 +8,21 @@
 
 .hide {
   display: none;
+}
+
+.register input {
+  display: flex;
+  margin: 0.5rem auto 0.5rem auto;
+  width: 12rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.1rem;
+  display: block;
+}
+.register select {
+  display: flex;
+  margin: 0.5rem auto 0.5rem auto;
+  width: 12.5rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.1rem;
+  display: block;
 }/*# sourceMappingURL=main.css.map */
