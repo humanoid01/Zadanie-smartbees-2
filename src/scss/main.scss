@@ -7,6 +7,10 @@
   display: block;
 }
 
+@function addBorder($isBorderTop) {
+  $isBorderTop: 1px dotted black;
+}
+
 .heading-container {
   width: 25%;
   background-color: rgba($color: #5fcf99, $alpha: 1);
@@ -24,4 +28,21 @@
   select {
     @include myMix(12.5rem);
   }
+}
+
+.delivers {
+  margin: auto;
+  width: 20%;
+  display: flex;
+
+  span {
+    text-align: center;
+    margin-left: 2rem;
+  }
+}
+.add--border {
+  margin: auto;
+  width: 20%;
+  border-top: 2px dotted gray;
+  border-bottom: 2px dotted gray;
 }

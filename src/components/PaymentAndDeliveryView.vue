@@ -2,7 +2,7 @@
   <h1 class="heading-container">2. METODA DOSTAWY</h1>
 
   <div v-for="{ text, key, id } in props.deliveryOption">
-    <div>
+    <div class="delivers">
       <input type="radio" name="" v-model="supplier" :value="key" :key="id" />
       <span> {{ text }}</span>
     </div>
@@ -12,26 +12,36 @@
   <h1 class="heading-container">3. METODA PŁATNOŚCI</h1>
   <div v-if="supplier === ''">
     <div v-for="{ text, id, price, key } in props.payments">
-      <input type="radio" :key="id" name="option" @click="addPrice(key)" />
-      <span>
-        {{ text }}
-        {{ props.transformPrice(price) }}
-      </span>
+      <div class="delivers">
+        <input type="radio" :key="id" name="option" @click="addPrice(key)" />
+        <span>
+          {{ text }}
+          {{ props.transformPrice(price) }} zł
+        </span>
+      </div>
     </div>
   </div>
 
   <div v-for="{ text, id, key, price } in props.payments">
     <div v-if="key === supplier">
-      <input type="radio" :key="id" @click="addPrice(key)" />
-      <span> {{ text }} {{ props.transformPrice(price) }} </span>
+      <div class="delivers">
+        <input type="radio" :key="id" @click="addPrice(key)" />
+        <span> {{ text }} {{ props.transformPrice(price) }} zł </span>
+      </div>
     </div>
   </div>
   <h1 class="heading-container">4. PODSUMOWANIE</h1>
+  <!-- calculate price -->
   <p>
-    cena:
-    {{ deliveryPrice === 0 ? '100,00' : transformPrice(100 + deliveryPrice) }}
+    Testowy produkt:
+    100
     zł
+    <p>Ilość: 1</p>
   </p>
+  <p class='add--border'>Suma częściowa 100 zł
+     </p>
+  <h3>Łącznie {{ deliveryPrice === 0 ? '100,00' : transformPrice(100 + deliveryPrice) }} zł </h3>
+ 
 </template>
 
 <script setup>

@@ -25,4 +25,21 @@
   font-family: "Roboto", sans-serif;
   font-size: 1.1rem;
   display: block;
+}
+
+.delivers {
+  margin: auto;
+  width: 20%;
+  display: flex;
+}
+.delivers span {
+  text-align: center;
+  margin-left: 2rem;
+}
+
+.add--border {
+  margin: auto;
+  width: 20%;
+  border-top: 2px dotted gray;
+  border-bottom: 2px dotted gray;
 }/*# sourceMappingURL=main.css.map */
